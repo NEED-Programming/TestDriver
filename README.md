@@ -100,6 +100,7 @@ bcdedit /debug on
 :: For small crash dumps (easier to parse):
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 3 /f
 :: Reboot
+shutdown /r /t 0
 ```
 
 ## Known Research Targets
