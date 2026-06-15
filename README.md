@@ -65,12 +65,21 @@ sc query TARGET
 probe_driver.exe target_tool_profile.json --verbose
 ```
 
+### Step 5.5 — Find Offset
+`If  the overflow is so clean it corrupts the kernel before the crash handler can run, causing an infinite fault loop rather than a controlled BSOD. This is consistent with METHOD_NEITHER on the IOCTL — the buffer goes directly to the handler with no kernel-side copying, so the overflow hits immediately and hard.`
+```cmd
+find_offset.exe
+```
+
+
 ### Step 6 — Parse crash dumps (if BSOD occurs)
 
 ```bash
 python3 read_dump.py C:\Windows\Minidump\dump.dmp
 # Or set dump type to Small in CrashControl for minidump format
 ```
+
+
 
 ## IOCTL Dispatch Pattern Detection
 
