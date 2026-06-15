@@ -43,6 +43,9 @@ python3 analyze_driver.py target_disasm.txt \
 
 ```bash
 sudo apt install gcc-mingw-w64-x86-64
+make
+
+# If that doesn't work, use
 x86_64-w64-mingw32-gcc -o probe_driver.exe probe_driver.c \
     -lkernel32 -static -O2 -Wall
 ```
